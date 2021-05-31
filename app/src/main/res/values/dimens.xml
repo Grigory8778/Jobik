@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="next_buttom_width">328sp</dimen>
+    <dimen name="next_buttom_height">48sp</dimen>
+    <dimen name="txt_marg_top">32dp</dimen>
+    <dimen name="btn_margBottom">40dp</dimen>
+</resources>
