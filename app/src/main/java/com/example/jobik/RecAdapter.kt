@@ -24,6 +24,7 @@ class RecAdapter(private val list: List<RecResult>) :
             val recImg = itemView.findViewById<ImageView>(R.id.image)
             txt.text = model.name
             Glide.with(itemView).load(model.image).into(recImg)
+            recImg.setBackgroundResource(R.drawable.ic_ellipse_1)
         }
     }
 
