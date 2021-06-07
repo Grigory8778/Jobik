@@ -1,4 +1,4 @@
-package com.example.jobik
+package com.example.jobik.hello
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.example.jobik.App
+import com.example.jobik.R
 
-class Hello_onbord_fragment : Fragment() {
-    private val presenter by lazy { SamplePresenter(App.INSTANCE.router) }
+class HelloOnbordFragment : Fragment() {
+    private val presenter by lazy { HelloOnbordPresenter(App.INSTANCE.router) }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

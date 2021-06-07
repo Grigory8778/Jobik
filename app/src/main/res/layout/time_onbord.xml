@@ -6,23 +6,33 @@
     android:layout_height="match_parent">
 
     <TimePicker
-        android:layout_width="match_parent"
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+        android:timePickerMode="spinner"/>
     <Button
         android:id="@+id/btn_time"
-        android:layout_width="@dimen/next_buttom_width"
-        android:layout_height="@dimen/next_buttom_height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/btn_margBottom"
         android:backgroundTint="@color/next"
         android:text="@string/time_onbord_complite"
+        android:textSize="@dimen/s16p"
         android:textColor="@color/black"
+        android:layout_marginStart="@dimen/t16p"
+        android:layout_marginEnd="@dimen/t16p"
+        android:paddingTop="@dimen/t16p"
+        android:paddingBottom="@dimen/t16p"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:stateListAnimator="@null"/>
 
     <TextView
         android:id="@+id/txt_time"
@@ -49,7 +59,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/txt2_time_onbord"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,5 +67,6 @@
         app:layout_constraintTop_toBottomOf="@+id/text1_time"
         android:gravity="center"
         android:layout_marginTop="@dimen/txt_marg_top"
-        android:textColor="@color/black"/>
+        android:layout_marginHorizontal="@dimen/size_42"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
