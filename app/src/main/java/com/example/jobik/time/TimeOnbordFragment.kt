@@ -28,7 +28,9 @@ class TimeOnbordFragment : Fragment() {
         val btn = view.findViewById<Button>(R.id.btn_time)
 
         btn.setOnClickListener {
-                App.INSTANCE.sharedPreferences.edit().putBoolean("bool",false).apply()
+            App.INSTANCE.sharedPreferences.edit().putBoolean(App.kayBool, true).apply()
+            App.INSTANCE.sharedPreferences.edit().putInt(App.timeMin, timePicker.minute).apply()
+            App.INSTANCE.sharedPreferences.edit().putInt(App.timeHour, timePicker.hour).apply()
         }
         timePicker.setIs24HourView(true)
     }

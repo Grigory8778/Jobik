@@ -13,6 +13,6 @@ object Screens {
     fun getHelloScreens() = FragmentScreen { HelloOnbordFragment() }
     fun getTimeScreens() = FragmentScreen { TimeOnbordFragment() }
     fun getAddListScreens() = FragmentScreen { AddListOnbordFragment() }
-    fun getMainA() = ActivityScreen { Intent(it, MainActivity::class.java) }
-    fun getOnbornA() = ActivityScreen { Intent(it, OnbordActivity::class.java) }
+    fun getMainScreens() = ActivityScreen { Intent(it, MainActivity::class.java) }
+    fun getOnbornScreens() = ActivityScreen { Intent(it, OnbordActivity::class.java) }
 }

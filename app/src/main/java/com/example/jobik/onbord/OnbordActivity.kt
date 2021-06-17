@@ -11,11 +11,9 @@ class OnbordActivity : AppCompatActivity() {
     private val presenter by lazy { OnbordPresenter(App.INSTANCE.router) }
     private val navigator by lazy { AppNavigator(this, R.id.frame_cont) }
     override fun onCreate(savedInstanceState: Bundle?) {
-        saveData()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.onbord_main)
-
-
+        saveData()
     }
 
     override fun onResumeFragments() {
@@ -29,12 +27,10 @@ class OnbordActivity : AppCompatActivity() {
     }
 
     fun saveData() {
-        if (App.INSTANCE.sharedPreferences.getBoolean("bool", true) == true) {
+        if (App.INSTANCE.sharedPreferences.getBoolean(App.kayBool, true)) {
             presenter.openHelloOnbord()
-
         } else {
-            presenter.strMainA()
+            presenter.openMain()
         }
     }
-
 }

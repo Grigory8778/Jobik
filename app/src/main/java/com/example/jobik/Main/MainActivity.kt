@@ -10,7 +10,6 @@ import com.github.terrakok.cicerone.androidx.AppNavigator
 
 class MainActivity : AppCompatActivity() {
     private val navigator: Navigator by lazy {  AppNavigator(this, R.id.main_cont)  }
-    private val router: Router by lazy { App.INSTANCE.router }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

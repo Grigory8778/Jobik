@@ -15,9 +15,11 @@ class RecAdapter(private val list: List<RecResult>) :
         return RecVievHolder(view)
 
     }
+
     override fun onBindViewHolder(holder: RecVievHolder, position: Int) {
         holder.bild(list[position])
     }
+
     class RecVievHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bild(model: RecResult) {
             val txt = itemView.findViewById<TextView>(R.id.txtVie)
@@ -28,9 +30,5 @@ class RecAdapter(private val list: List<RecResult>) :
         }
     }
 
-
-
-    override fun getItemCount(): Int=list.size
-
-
+    override fun getItemCount(): Int = list.size
 }
