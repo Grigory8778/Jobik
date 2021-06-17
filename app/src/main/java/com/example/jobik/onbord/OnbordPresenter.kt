@@ -7,4 +7,10 @@ class OnbordPresenter(private val router: Router) {
     fun openHelloOnbord() {
         router.navigateTo(Screens.getHelloScreens())
     }
+fun onbordA(){
+    router.navigateTo(Screens.getOnbornA())
+}
+    fun strMainA(){
+        router.navigateTo(Screens.getMainA())
+    }
 }

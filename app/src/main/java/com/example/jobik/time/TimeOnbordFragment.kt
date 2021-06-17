@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.jobik.App
 import com.example.jobik.R
+import com.example.jobik.navigation.Screens
 
 class TimeOnbordFragment : Fragment() {
     private val presenter by lazy { TimeOnbordPresenter(App.INSTANCE.router) }
@@ -23,10 +24,11 @@ class TimeOnbordFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val timePicker=view.findViewById<TimePicker>(R.id.time_picker)
+        val timePicker = view.findViewById<TimePicker>(R.id.time_picker)
         val btn = view.findViewById<Button>(R.id.btn_time)
+
         btn.setOnClickListener {
-            Toast.makeText(requireContext(), "ВСЕ.Это последний экран", Toast.LENGTH_SHORT).show()
+                App.INSTANCE.sharedPreferences.edit().putBoolean("bool",false).apply()
         }
         timePicker.setIs24HourView(true)
     }
