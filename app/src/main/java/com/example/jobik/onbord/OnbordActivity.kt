@@ -13,7 +13,7 @@ class OnbordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.onbord_main)
-        saveData()
+        presenter.saveData()
     }
 
     override fun onResumeFragments() {
@@ -26,11 +26,5 @@ class OnbordActivity : AppCompatActivity() {
         super.onPause()
     }
 
-    fun saveData() {
-        if (App.INSTANCE.sharedPreferences.getBoolean(App.kayBool, true)) {
-            presenter.openHelloOnbord()
-        } else {
-            presenter.openMain()
-        }
-    }
+
 }

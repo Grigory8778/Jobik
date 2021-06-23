@@ -14,7 +14,6 @@ class App : Application() {
         super.onCreate()
         INSTANCE = this
         sharedPreferences = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
-        sharedPreferences.getBoolean(kayBool, true)
         sharedPreferences.getInt(timeMin, 12)
         sharedPreferences.getInt(timeHour, 12)
     }

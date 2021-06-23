@@ -1,4 +1,4 @@
 package com.example.jobik
 
-class RecResult(val name:String, val image:Int) {
+data class RecResult(val name:String, val image:Int) {
 }
