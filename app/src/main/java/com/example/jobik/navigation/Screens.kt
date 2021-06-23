@@ -1,6 +1,7 @@
 package com.example.jobik.navigation
 
 import android.content.Intent
+import com.example.jobik.Home.HomeFragment
 import com.example.jobik.Main.MainActivity
 import com.example.jobik.addList.AddListOnbordFragment
 import com.example.jobik.hello.HelloOnbordFragment
@@ -15,4 +16,5 @@ object Screens {
     fun getAddListScreens() = FragmentScreen { AddListOnbordFragment() }
     fun getMainScreens() = ActivityScreen { Intent(it, MainActivity::class.java) }
     fun getOnbornScreens() = ActivityScreen { Intent(it, OnbordActivity::class.java) }
+    fun getHomeScreens() = FragmentScreen { HomeFragment() }
 }
