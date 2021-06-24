@@ -7,16 +7,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.jobik.RecAdapter.RecVievHolder as RecViewHolder
 
 class RecAdapter(private val list: List<RecResult>) :
-    RecyclerView.Adapter<RecAdapter.RecVievHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecVievHolder {
+    RecyclerView.Adapter<RecViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.rec_item_one, parent, false)
-        return RecVievHolder(view)
+        return RecViewHolder(view)
 
     }
 
-    override fun onBindViewHolder(holder: RecVievHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecViewHolder, position: Int) {
         holder.bild(list[position])
     }
 

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ToggleButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -28,6 +29,7 @@ class AddListOnbordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val rec = view.findViewById<RecyclerView>(R.id.recycler)
         val layoutManager = LinearLayoutManager(context)
+        val toggleButton=view.findViewById<ToggleButton>(R.id.tgb)
         val adapter = RecAdapter(
             listOf(
                 RecResult(
@@ -42,6 +44,5 @@ class AddListOnbordFragment : Fragment() {
         btn.setOnClickListener {
             presenter.getAdd()
         }
-
     }
 }

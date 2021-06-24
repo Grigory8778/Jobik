@@ -25,10 +25,16 @@
         android:layout_marginStart="@dimen/t16p"
         android:layout_marginEnd="@dimen/t16p"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ToggleButton
+        android:id="@+id/tgb"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:gravity="center"
+        android:background="@drawable/btn_toggle"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textOff=""
+        android:textOn=""
         app:layout_constraintBottom_toBottomOf="@+id/image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

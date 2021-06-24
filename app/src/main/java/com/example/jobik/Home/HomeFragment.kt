@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jobik.R
 import com.example.jobik.RecAdapter
+import com.example.jobik.RecMainAdapter
 import com.example.jobik.RecResult
 
 class HomeFragment : Fragment() {
@@ -22,11 +23,11 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val recyc = view.findViewById<RecyclerView>(R.id.recycler_main)
         val layoutManager = LinearLayoutManager(context)
-        val adapter = RecAdapter(
+        val adapter = RecMainAdapter(
             listOf(
                 RecResult(
                     "Выключить утюг",
-                    R.drawable.ic_icon
+                    R.drawable.ic_box
                 )
             )
         )
