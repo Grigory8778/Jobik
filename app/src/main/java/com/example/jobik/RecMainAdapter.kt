@@ -10,22 +10,23 @@ import com.bumptech.glide.Glide
 
 class RecMainAdapter(private val list: List<RecResult>) :
     RecyclerView.Adapter<RecMainAdapter.RecViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecViewHolder
-    {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.rec_main, parent, false)
         return RecViewHolder(view)
 
     }
-    override fun onBindViewHolder(holder: RecViewHolder, position: Int) {
 
+    override fun onBindViewHolder(holder: RecViewHolder, position: Int) {
+        holder.bild(list[position])
     }
 
 
     class RecViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bild(model: RecResult) {
             val txt = itemView.findViewById<TextView>(R.id.txtVie)
+            val img = itemView.findViewById<ImageView>(R.id.image_main)
             txt.text = model.name
-            val recImg = itemView.findViewById<ImageView>(R.id.image)
+            img.setImageResource(model.image)
         }
     }
 
@@ -33,3 +34,5 @@ class RecMainAdapter(private val list: List<RecResult>) :
 
 
 }
+
+

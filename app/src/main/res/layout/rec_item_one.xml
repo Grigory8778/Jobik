@@ -12,6 +12,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="@dimen/t16p"
+        android:padding="@dimen/t8dp"
         />
 
     <TextView

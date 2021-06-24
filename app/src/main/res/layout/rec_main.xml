@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/image_main"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="@dimen/t16p"
@@ -20,8 +20,8 @@
         android:layout_marginStart="@dimen/t16p"
         android:layout_marginEnd="@dimen/t16p"
         android:textSize="@dimen/t16p"
-        app:layout_constraintBottom_toBottomOf="@id/image"
-        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintBottom_toBottomOf="@id/image_main"
+        app:layout_constraintStart_toEndOf="@id/image_main"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/t16p"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintBottom_toBottomOf="@+id/image_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
