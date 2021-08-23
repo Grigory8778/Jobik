@@ -11,4 +11,6 @@
     <color name="statusbar">#F3F3F3</color>
     <color name="next">#D7CEFF</color>
     <color name="action">#D7CEFF</color>
+    <color name="strip">#E8E8E8</color>
+
 </resources>

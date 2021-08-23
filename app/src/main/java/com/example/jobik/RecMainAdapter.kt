@@ -8,31 +8,37 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class RecMainAdapter(private val list: List<RecResult>) :
-    RecyclerView.Adapter<RecMainAdapter.RecViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.rec_main, parent, false)
-        return RecViewHolder(view)
+class RecMainAdapter() :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    private val list: MutableList<Item> = mutableListOf()
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return MainViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.rec_main, parent, false)
+        )
 
     }
 
-    override fun onBindViewHolder(holder: RecViewHolder, position: Int) {
-        holder.bild(list[position])
-    }
-
-
-    class RecViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        fun bild(model: RecResult) {
-            val txt = itemView.findViewById<TextView>(R.id.txtVie)
-            val img = itemView.findViewById<ImageView>(R.id.image_main)
-            txt.text = model.name
-            img.setImageResource(model.image)
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        when (val i = list[position]) {
+            is Item.Elements -> (holder as? MainViewHolder)?.bind(i)
         }
     }
 
+    fun setList(list: List<Item>) {
+        this.list.clear()
+        this.list.addAll(list)
+        notifyDataSetChanged()
+    }
+
+    class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        fun bind(model: Item.Elements) {
+            val txt = itemView.findViewById<TextView>(R.id.txtVie_main)
+            val recImg = itemView.findViewById<ImageView>(R.id.image_main)
+            txt.text = model.name
+            recImg.setBackgroundResource(model.backgraund)
+            Glide.with(itemView).load(model.image).into(recImg)
+        }
+    }
     override fun getItemCount(): Int = list.size
-
-
 }
-
 

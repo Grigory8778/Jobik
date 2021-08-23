@@ -1,13 +1,10 @@
 package com.example.jobik.Main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.jobik.App
-import com.example.jobik.Home.HomePresenter
 import com.example.jobik.R
-import com.example.jobik.onbord.OnbordPresenter
 import com.github.terrakok.cicerone.Navigator
-import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.androidx.AppNavigator
 
 class MainActivity : AppCompatActivity() {

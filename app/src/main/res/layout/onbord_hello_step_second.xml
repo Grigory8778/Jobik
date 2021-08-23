@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button
+        android:id="@+id/btn_second_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/t16p"
+        android:layout_marginEnd="@dimen/t16p"
+        android:layout_marginBottom="@dimen/btn_margBottom"
+        android:backgroundTint="@color/next"
+        android:paddingTop="@dimen/t16p"
+        android:paddingBottom="@dimen/t16p"
+        android:stateListAnimator="@null"
+        android:text="ДАЛЬШЕ"
+        android:textColor="@color/black"
+        android:textSize="@dimen/t16p"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбирай и отмечай"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_step1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView_step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:gravity="center"
+        android:text="@string/txt_step_2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/t16p"
+        android:layout_marginStart="@dimen/s16p"
+        android:layout_marginEnd="@dimen/s16p"
+        app:layout_constraintBottom_toTopOf="@+id/btn_second_next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_second_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/s16p"
+        android:text="Пропустить"
+        android:textColor="@color/black"
+        android:textSize="@dimen/s16p"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="371dp"
+        android:layout_height="316dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_step1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_group_341" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

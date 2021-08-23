@@ -1,0 +1,7 @@
+<resources>
+
+
+    <style name="my_time_picker_style">
+        <item name="android:textSize">34sp</item>
+    </style>
+</resources>

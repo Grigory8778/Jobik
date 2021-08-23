@@ -6,7 +6,7 @@ import com.github.terrakok.cicerone.Router
 
 class OnbordPresenter(private val router: Router) {
     fun openHelloOnbord() {
-        router.navigateTo(Screens.getHelloScreens())
+        router.replaceScreen(Screens.getHelloOneScreens())
     }
 
     fun openOnbord() {
@@ -14,7 +14,7 @@ class OnbordPresenter(private val router: Router) {
     }
 
     fun openMain() {
-        router.navigateTo(Screens.getMainScreens())
+        router.newRootScreen(Screens.getMainScreens())
     }
     fun saveData() {
         if (App.INSTANCE.sharedPreferences.getBoolean(App.kayBool, true)) {
