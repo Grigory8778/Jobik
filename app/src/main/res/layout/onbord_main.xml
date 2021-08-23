@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onbord.OnbordActivity">
+    tools:context=".presentation.onbord.OnbordActivity">
     <FrameLayout
         android:id="@+id/frame_cont"
         android:layout_width="match_parent"
