@@ -1,10 +1,6 @@
 package com.example.jobik.data
 
-import android.content.Context
 import android.content.SharedPreferences
-import android.widget.TimePicker
-import com.example.jobik.R
-import com.example.jobik.presentation.base.App
 
 class LocalRepositoryImpl(private val sharedPreferences: SharedPreferences) : LocalRepository {
     override fun saveStatus(status: Boolean) {

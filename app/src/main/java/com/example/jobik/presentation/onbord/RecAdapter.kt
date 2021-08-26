@@ -1,4 +1,4 @@
-package com.example.jobik
+package com.example.jobik.presentation.onbord
 
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -6,13 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.ToggleButton
-import androidx.core.content.contentValuesOf
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.jobik.R
 import com.example.jobik.presentation.base.Item
 
 class RecAdapter() :
