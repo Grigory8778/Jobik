@@ -1,5 +1,6 @@
 package com.example.jobik
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -34,7 +35,6 @@ class RecAdapter() :
             is Item.Elements -> (holder as? MainViewHolder)?.bind(i, position)
 
         }
-
     }
 
     fun setList(list: List<Item>) {
@@ -45,12 +45,10 @@ class RecAdapter() :
 
     inner class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(model: Item.Elements, position: Int) {
-            val toggleButton = itemView.findViewById<ToggleButton>(R.id.tgb_main)
             val txt = itemView.findViewById<TextView>(R.id.txtVie_one)
             val recImg = itemView.findViewById<ImageView>(R.id.image_one)
-            toggleButton.callOnClick()
             txt.text = model.name
-            recImg.setBackgroundResource(model.backgraund)
+            recImg.backgroundTintList= ColorStateList.valueOf(model.color)
             Glide.with(itemView).load(model.image).into(recImg)
             itemView.setOnClickListener {
                 recImg.setBackgroundColor(Color.BLUE)

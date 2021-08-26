@@ -2,6 +2,7 @@ package com.example.jobik.Home
 
 import android.os.Bundle
 import android.view.*
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -41,52 +42,52 @@ class HomeFragment : Fragment() {
                 Item.Elements(
                     "Утюг",
                     R.drawable.ic_iron,
-                    R.drawable.ic_ellipse_yellow
+                    ContextCompat.getColor(requireContext(),R.color.yellow)
                 ),
                 Item.Elements(
                     "Компьютер",
                     R.drawable.ic_pc,
-                    R.drawable.ic_ellipse_yellow
+                    ContextCompat.getColor(requireContext(),R.color.yellow)
                 ),
                 Item.Elements(
                     "Сплит-система",
                     R.drawable.ic_split,
-                    R.drawable.ic_ellipse_yellow
+                    ContextCompat.getColor(requireContext(),R.color.yellow)
                 ),
                 Item.Elements(
                     "Утюжок",
                     R.drawable.ic_curling_iron,
-                    R.drawable.ic_ellipse_yellow
+                    ContextCompat.getColor(requireContext(),R.color.yellow)
                 ),
                 Item.Elements(
                     "Свет",
                     R.drawable.ic_light,
-                    R.drawable.ic_ellipse_turquoise
+                    ContextCompat.getColor(requireContext(),R.color.green_blue)
                 ),
                 Item.Elements(
                     "Вода",
                     R.drawable.ic_water,
-                    R.drawable.ic_ellipse_turquoise
+                    ContextCompat.getColor(requireContext(),R.color.green_blue)
                 ),
                 Item.Elements(
                     "Газ",
                     R.drawable.ic_gas,
-                    R.drawable.ic_ellipse_turquoise
+                    ContextCompat.getColor(requireContext(),R.color.green_blue)
                 ),
                 Item.Elements(
                     "Окна",
                     R.drawable.ic_window,
-                    R.drawable.ic_ellipse_blue
+                    ContextCompat.getColor(requireContext(),R.color.blue)
                 ),
                 Item.Elements(
                     "Дверь",
                     R.drawable.ic_door,
-                    R.drawable.ic_ellipse_blue
+                    ContextCompat.getColor(requireContext(),R.color.blue)
                 ),
                 Item.Elements(
                     "Сигнализация",
                     R.drawable.ic_alarm,
-                    R.drawable.ic_ellipse_blue
+                    ContextCompat.getColor(requireContext(),R.color.blue)
                 )
             )
         )
