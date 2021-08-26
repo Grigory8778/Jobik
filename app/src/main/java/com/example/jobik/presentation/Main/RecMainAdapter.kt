@@ -15,7 +15,7 @@ class RecMainAdapter() :
     private val list: MutableList<Item> = mutableListOf()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MainViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.rec_main, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.rec_main_item, parent, false)
         )
 
     }
