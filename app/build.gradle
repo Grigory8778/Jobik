@@ -51,7 +51,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation "androidx.drawerlayout:drawerlayout:1.1.1"
-
     implementation "io.insert-koin:koin-core:$koin_version"
     // Koin test features
     testImplementation "io.insert-koin:koin-test:$koin_version"

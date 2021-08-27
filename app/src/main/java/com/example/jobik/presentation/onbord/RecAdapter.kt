@@ -1,17 +1,15 @@
-package com.example.jobik
+package com.example.jobik.presentation.onbord
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.ToggleButton
-import androidx.core.content.contentValuesOf
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.jobik.R
 import com.example.jobik.presentation.base.Item
 
 class RecAdapter() :
@@ -34,7 +32,6 @@ class RecAdapter() :
             is Item.Elements -> (holder as? MainViewHolder)?.bind(i, position)
 
         }
-
     }
 
     fun setList(list: List<Item>) {
@@ -45,12 +42,10 @@ class RecAdapter() :
 
     inner class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(model: Item.Elements, position: Int) {
-            val toggleButton = itemView.findViewById<ToggleButton>(R.id.tgb_main)
             val txt = itemView.findViewById<TextView>(R.id.txtVie_one)
             val recImg = itemView.findViewById<ImageView>(R.id.image_one)
-            toggleButton.callOnClick()
             txt.text = model.name
-            recImg.setBackgroundResource(model.backgraund)
+            recImg.backgroundTintList= ColorStateList.valueOf(model.color)
             Glide.with(itemView).load(model.image).into(recImg)
             itemView.setOnClickListener {
                 recImg.setBackgroundColor(Color.BLUE)

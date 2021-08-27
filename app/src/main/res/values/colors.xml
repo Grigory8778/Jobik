@@ -12,5 +12,7 @@
     <color name="next">#D7CEFF</color>
     <color name="action">#D7CEFF</color>
     <color name="strip">#E8E8E8</color>
-
+    <color name="green_blue">#C5F3F1</color>
+    <color name="blue">#C5E5F3</color>
+    <color name="yellow">#F3E6C5</color>
 </resources>
