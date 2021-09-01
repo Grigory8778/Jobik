@@ -7,4 +7,5 @@ interface LocalRepository {
     fun saveHour(hour:Int)
     fun getMin():Int
     fun getHour():Int
+
 }

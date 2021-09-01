@@ -1,6 +1,10 @@
 package com.example.jobik.data
 
 import android.content.SharedPreferences
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat
+import com.example.jobik.R
+import com.example.jobik.presentation.base.Item
 
 class LocalRepositoryImpl(private val sharedPreferences: SharedPreferences) : LocalRepository {
     override fun saveStatus(status: Boolean) {
@@ -26,6 +30,7 @@ class LocalRepositoryImpl(private val sharedPreferences: SharedPreferences) : Lo
     override fun getHour(): Int {
         return  sharedPreferences.getInt(TIME_HOUR, 30)
     }
+
 
 
     companion object {

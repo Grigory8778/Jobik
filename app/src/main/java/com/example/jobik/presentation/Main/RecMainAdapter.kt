@@ -51,7 +51,6 @@ class RecMainAdapter:
                 } else {
                     container.backgroundTintList= ColorStateList.valueOf(Color.WHITE)
                 }
-
             }
         }
     }

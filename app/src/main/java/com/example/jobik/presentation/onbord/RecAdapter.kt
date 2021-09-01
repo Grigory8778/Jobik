@@ -45,12 +45,8 @@ class RecAdapter() :
             val txt = itemView.findViewById<TextView>(R.id.txtVie_one)
             val recImg = itemView.findViewById<ImageView>(R.id.image_one)
             txt.text = model.name
-            recImg.backgroundTintList= ColorStateList.valueOf(model.color)
+            recImg.backgroundTintList = ColorStateList.valueOf(model.color)
             Glide.with(itemView).load(model.image).into(recImg)
-            itemView.setOnClickListener {
-                recImg.setBackgroundColor(Color.BLUE)
-                notifyItemChanged(position)
-            }
         }
     }
 
@@ -69,15 +65,6 @@ class RecAdapter() :
     }
 
     override fun getItemCount(): Int = list.size
-
-    fun color(holder: RecyclerView.ViewHolder, position: Int) {
-        if (position % 2 == 0) {
-            holder.itemView.setBackgroundColor(Color.parseColor("#fafafa"));
-        } else {
-            holder.itemView.setBackgroundColor(Color.parseColor("#ffffff"));
-        }
-    }
-
 
     companion object {
         const val TITLE = 1
