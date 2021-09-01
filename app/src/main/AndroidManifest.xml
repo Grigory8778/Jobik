@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jobik">
         <activity android:name="com.example.jobik.SheetActivity"/>
-        <activity android:name="com.example.jobik.presentation.Main.MainActivity"/>
+        <activity android:name="com.example.jobik.presentation.main.MainActivity"/>
         <activity android:name="com.example.jobik.presentation.onbord.OnbordActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.jobik.hello
+package com.example.jobik.presentation.hellionbord
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.jobik.R
 import com.example.jobik.presentation.base.App
-import com.example.jobik.presentation.hellionbord.HelloOnbordPresenter
 
 class OnboardHelleStepFragmetSecond: Fragment() {
     private val presenter by lazy { HelloOnbordPresenter(App.INSTANCE.router) }

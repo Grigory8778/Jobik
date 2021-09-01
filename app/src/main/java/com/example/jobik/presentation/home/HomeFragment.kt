@@ -1,14 +1,15 @@
-package com.example.jobik.Home
+package com.example.jobik.presentation.home
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jobik.R
-import com.example.jobik.presentation.Home.HomePresenter
-import com.example.jobik.presentation.Main.RecMainAdapter
+import com.example.jobik.presentation.main.RecMainAdapter
 import com.example.jobik.presentation.base.App
 import com.example.jobik.presentation.base.Item
 import com.google.android.material.floatingactionbutton.FloatingActionButton

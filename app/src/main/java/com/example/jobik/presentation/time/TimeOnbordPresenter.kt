@@ -1,12 +1,12 @@
 package com.example.jobik.presentation.time
 
-import com.example.jobik.data.LocalRepository
-import com.example.jobik.navigation.Screens
+import com.example.jobik.data.TimeRepository
+import com.example.jobik.presentation.navigation.Screens
 import com.github.terrakok.cicerone.Router
 
 class TimeOnbordPresenter(
     private val router: Router,
-    private val repository: LocalRepository,
+    private val repository: TimeRepository,
     private val view: TimeOnbordView
 ) {
     fun openMain() {

@@ -1,12 +1,8 @@
 package com.example.jobik.data
 
 import android.content.SharedPreferences
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.core.content.ContextCompat
-import com.example.jobik.R
-import com.example.jobik.presentation.base.Item
 
-class LocalRepositoryImpl(private val sharedPreferences: SharedPreferences) : LocalRepository {
+class TimeRepositoryImpl(private val sharedPreferences: SharedPreferences) : TimeRepository {
     override fun saveStatus(status: Boolean) {
         sharedPreferences.edit().putBoolean(KAY_STATUS, status).apply()
     }

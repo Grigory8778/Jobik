@@ -9,14 +9,13 @@ import android.widget.TimePicker
 import androidx.fragment.app.Fragment
 import com.example.jobik.presentation.base.App
 import com.example.jobik.R
-import com.example.jobik.data.LocalRepository
-import com.example.jobik.data.LocalRepositoryImpl
+import com.example.jobik.data.TimeRepositoryImpl
 
 class TimeOnbordFragment : Fragment(), TimeOnbordView {
     private val presenter by lazy {
         TimeOnbordPresenter(
             App.INSTANCE.router,
-            LocalRepositoryImpl(App.INSTANCE.sharedPreferences), this
+            TimeRepositoryImpl(App.INSTANCE.sharedPreferences), this
         )
     }
     private val timePicker = view?.findViewById<TimePicker>(R.id.time_picker)

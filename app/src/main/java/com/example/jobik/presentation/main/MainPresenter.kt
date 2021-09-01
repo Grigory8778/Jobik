@@ -1,6 +1,6 @@
-package com.example.jobik.presentation.Main
+package com.example.jobik.presentation.main
 
-import com.example.jobik.navigation.Screens
+import com.example.jobik.presentation.navigation.Screens
 import com.github.terrakok.cicerone.Router
 
 class MainPresenter(private val router: Router) {

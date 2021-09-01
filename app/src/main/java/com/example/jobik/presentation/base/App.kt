@@ -3,9 +3,11 @@ package com.example.jobik.presentation.base
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.jobik.data.ResourceProvider
 import com.github.terrakok.cicerone.Cicerone
 
 class App : Application() {
+    lateinit var resourceProvider: ResourceProvider
     lateinit var sharedPreferences: SharedPreferences
     private val cicerone = Cicerone.create()
     val router get() = cicerone.router
@@ -14,7 +16,7 @@ class App : Application() {
         super.onCreate()
         INSTANCE = this
         sharedPreferences = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
-
+        resourceProvider = ResourceProvider(this)
     }
 
     companion object {

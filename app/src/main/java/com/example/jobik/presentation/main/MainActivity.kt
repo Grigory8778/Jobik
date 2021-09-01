@@ -1,9 +1,8 @@
-package com.example.jobik.presentation.Main
+package com.example.jobik.presentation.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.jobik.R
-import com.example.jobik.presentation.Main.MainPresenter
 import com.example.jobik.presentation.base.App
 import com.github.terrakok.cicerone.Navigator
 import com.github.terrakok.cicerone.androidx.AppNavigator

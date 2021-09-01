@@ -1,6 +1,6 @@
 package com.example.jobik.data
 
-interface LocalRepository {
+interface TimeRepository {
     fun saveStatus(status:Boolean)
     fun getStatus():Boolean
     fun saveMin(min:Int)

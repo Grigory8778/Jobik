@@ -1,14 +1,14 @@
-package com.example.jobik.navigation
+package com.example.jobik.presentation.navigation
 
 import android.content.Intent
-import com.example.jobik.Home.HomeFragment
 import com.example.jobik.Home.sheet.BottomSheetFragment
-import com.example.jobik.presentation.Main.MainActivity
 import com.example.jobik.SheetActivity
-import com.example.jobik.addList.AddListOnbordFragment
-import com.example.jobik.hello.OnboardHelleStepFragmetOne
-import com.example.jobik.hello.OnboardHelleStepFragmetSecond
+import com.example.jobik.presentation.addonbord.AddListOnbordFragment
+import com.example.jobik.presentation.hellionbord.OnboardHelleStepFragmetOne
+import com.example.jobik.presentation.hellionbord.OnboardHelleStepFragmetSecond
 import com.example.jobik.presentation.hellionbord.OnboardHelloStepFragmetThird
+import com.example.jobik.presentation.home.HomeFragment
+import com.example.jobik.presentation.main.MainActivity
 import com.example.jobik.presentation.onbord.OnbordActivity
 import com.example.jobik.presentation.time.TimeOnbordFragment
 import com.github.terrakok.cicerone.androidx.ActivityScreen

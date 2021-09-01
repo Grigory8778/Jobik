@@ -1,4 +1,4 @@
-package com.example.jobik.presentation.Main
+package com.example.jobik.presentation.main
 
 import android.content.res.ColorStateList
 import android.graphics.Color
