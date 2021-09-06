@@ -11,4 +11,20 @@
     <string name="txt_step1">Теперь вам не придется мучительно  \nвспоминать, выключили ли вы утюг. Отмечайте\n в приложении все действия и будьте спокойны</string>
     <string name="txt_step_2">Добавляйте задачи на проверку и отмечайте их\n перед выходом из дома\n</string>
     <string name="txt_step_3">Каждый день мы будем присылать вам уведомление, чтобы вы не забыли проверить все приборы перед уходом</string>
+    //Title
+    <string name="electrical">"Электроприборы"</string>
+    <string name="utilities">"Коммунальные услуги"</string>
+    <string name="exit">"На выходе"</string>
+    //Elements
+    <string name="iron">"Утюг"</string>
+    <string name="computer">"Компьютер"</string>
+    <string name="split">"Сплит-система"</string>
+    <string name="rectifier">"Утюжок"</string>
+    <string name="light">"Свет"</string>
+    <string name="water">"Вода"</string>
+    <string name="gas">"Газ"</string>
+    <string name="window">"Окна"</string>
+    <string name="door">"Дверь"</string>
+    <string name="signaling">"Сигнализация"</string>
+
 </resources>

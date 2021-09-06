@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ResourceCursorAdapter
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.jobik.R
@@ -44,19 +46,15 @@ class RecAdapter() :
         fun bind(model: Item.Elements, position: Int) {
             val txt = itemView.findViewById<TextView>(R.id.txtVie_one)
             val recImg = itemView.findViewById<ImageView>(R.id.image_one)
-            txt.text = model.name
-            recImg.backgroundTintList= ColorStateList.valueOf(model.color)
+            txt.setText(model.name)
+            recImg.backgroundTintList = ColorStateList.valueOf(model.color)
             Glide.with(itemView).load(model.image).into(recImg)
-            itemView.setOnClickListener {
-                recImg.setBackgroundColor(Color.BLUE)
-                notifyItemChanged(position)
-            }
         }
     }
 
     class TitleViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(model: Item.Title) {
-            itemView.findViewById<TextView>(R.id.txt_title_item).text = model.title
+            itemView.findViewById<TextView>(R.id.txt_title_item).setText(model.title)
         }
 
     }
@@ -69,15 +67,6 @@ class RecAdapter() :
     }
 
     override fun getItemCount(): Int = list.size
-
-    fun color(holder: RecyclerView.ViewHolder, position: Int) {
-        if (position % 2 == 0) {
-            holder.itemView.setBackgroundColor(Color.parseColor("#fafafa"));
-        } else {
-            holder.itemView.setBackgroundColor(Color.parseColor("#ffffff"));
-        }
-    }
-
 
     companion object {
         const val TITLE = 1
