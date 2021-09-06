@@ -1,14 +1,15 @@
 package com.example.jobik.presentation.time
 
+import androidx.lifecycle.ViewModel
 import com.example.jobik.data.TimeRepository
 import com.example.jobik.presentation.navigation.Screens
 import com.github.terrakok.cicerone.Router
 
-class TimeOnbordPresenter(
+class TimeOnbordViewModel(
     private val router: Router,
     private val repository: TimeRepository,
-    private val view: TimeOnbordView
-) {
+
+    ) : ViewModel() {
     fun openMain() {
         router.navigateTo(Screens.getMainScreens())
     }
@@ -26,7 +27,7 @@ class TimeOnbordPresenter(
     }
 
     fun initial() {
-        view.setHour(repository.getHour())
-        view.setMin(repository.getMin())
+        repository.getHour()
+        repository.getMin()
     }
 }

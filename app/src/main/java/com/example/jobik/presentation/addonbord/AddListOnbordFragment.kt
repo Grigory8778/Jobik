@@ -5,28 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.annotation.RestrictTo
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jobik.R
-import com.example.jobik.data.ElementsRepositoryImpl
-import com.example.jobik.database.Workplace
-import com.example.jobik.presentation.base.App
-import com.example.jobik.presentation.base.Item
 import com.example.jobik.presentation.onbord.RecAdapter
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.launch
-import org.koin.androidx.scope.LifecycleScopeDelegate
-import org.koin.androidx.scope.lifecycleScope
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
-class AddListOnbordFragment : Fragment(), AddListOnbordView {
+class AddListOnbordFragment : Fragment() {
     private val adapter = RecAdapter()
-    private val presenter by lazy { AddListOnbordPresenter(App.INSTANCE.router,ElementsRepositoryImpl(App.INSTANCE.resourceProvider),this) }
-
+    private val viewModel by viewModel<AddListOnbordViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -43,17 +31,15 @@ class AddListOnbordFragment : Fragment(), AddListOnbordView {
         val layoutManager = LinearLayoutManager(context)
         rec.layoutManager = layoutManager
         rec.adapter = adapter
-        presenter.getList()
+        viewModel.dataList.observe(viewLifecycleOwner) { list ->
+            adapter.setList(list)
+        }
         val btn = view.findViewById<Button>(R.id.btn_add)
         btn.setOnClickListener {
-            presenter.getAdd()
-            GlobalScope.launch {
-                App.INSTANCE.database.workplaceDao().insert(Workplace(1,"Дом"))
-            }
+            viewModel.getAdd()
+            viewModel.insert(1, "Дом")
         }
     }
-
-    override fun showList(List: List<Item>) {
-        adapter.setList(List)
-    }
 }
+
+

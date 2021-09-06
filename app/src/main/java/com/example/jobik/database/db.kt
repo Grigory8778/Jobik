@@ -5,6 +5,6 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [Workplace::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun workplaceDao(): WeatherDao
+    abstract fun weatherDao(): WeatherDao
 }
 

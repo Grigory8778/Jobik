@@ -42,7 +42,7 @@ class RecMainAdapter:
             val container = itemView.findViewById<ConstraintLayout>(R.id.const_main)
             val txt = itemView.findViewById<TextView>(R.id.txtVie_main)
             val recImg = itemView.findViewById<ImageView>(R.id.image_main)
-            txt.text = model.name
+            txt.setText(model.name)
             recImg.backgroundTintList=ColorStateList.valueOf(model.color)
             Glide.with(itemView).load(model.image).into(recImg)
             toggleButton.setOnCheckedChangeListener { _, isChecked ->

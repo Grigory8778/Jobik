@@ -1,6 +1,7 @@
 package com.example.jobik.data
 
 
+import android.renderscript.Sampler
 import com.example.jobik.R
 import com.example.jobik.presentation.base.Item
 
@@ -8,56 +9,56 @@ class ElementsRepositoryImpl(
      private val resourceProvider: ResourceProvider
 ):ElementsRepository  {
     override fun getElements(): List<Item> = listOf(
-        Item.Title("Электроприборы"),
+        Item.Title(R.string.electrical),
         Item.Elements(
-            "Утюг",
+            R.string.iron,
             R.drawable.ic_iron,
             resourceProvider.getColor(R.color.yellow)
         ),
         Item.Elements(
-            "Компьютер",
+            R.string.computer,
             R.drawable.ic_pc,
             resourceProvider.getColor( R.color.yellow)
         ),
         Item.Elements(
-            "Сплит-система",
+            R.string.split,
             R.drawable.ic_split,
             resourceProvider.getColor( R.color.yellow)
         ),
         Item.Elements(
-            "Утюжок",
+            R.string.rectifier,
             R.drawable.ic_curling_iron,
             resourceProvider.getColor(R.color.yellow)
         ),
-        Item.Title("Коммунальные услуги"),
+        Item.Title(R.string.utilities),
         Item.Elements(
-            "Свет",
+            R.string.light,
             R.drawable.ic_light,
             resourceProvider.getColor( R.color.green_blue)
         ),
         Item.Elements(
-            "Вода",
+            R.string.water,
             R.drawable.ic_water,
             resourceProvider.getColor( R.color.green_blue)
         ),
         Item.Elements(
-            "Газ",
+            R.string.gas,
             R.drawable.ic_gas,
             resourceProvider.getColor( R.color.green_blue)
         ),
-        Item.Title("На выходе"),
+        Item.Title(R.string.exit),
         Item.Elements(
-            "Окна",
+            R.string.window,
             R.drawable.ic_window,
             resourceProvider.getColor( R.color.blue)
         ),
         Item.Elements(
-            "Дверь",
+            R.string.door,
             R.drawable.ic_door,
             resourceProvider.getColor( R.color.blue)
         ),
         Item.Elements(
-            "Сигнализация",
+            R.string.signaling,
             R.drawable.ic_alarm,
             resourceProvider.getColor( R.color.blue)
         )

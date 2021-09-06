@@ -16,6 +16,7 @@ import com.github.terrakok.cicerone.androidx.FragmentScreen
 
 
 object Screens {
+
     fun getHelloThirdScreen() = FragmentScreen { OnboardHelloStepFragmetThird() }
     fun getHelloSecondScreen() = FragmentScreen { OnboardHelleStepFragmetSecond() }
     fun getHelloOneScreens() = FragmentScreen { OnboardHelleStepFragmetOne() }

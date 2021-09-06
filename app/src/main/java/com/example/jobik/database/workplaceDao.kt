@@ -8,14 +8,14 @@ interface WeatherDao {
     suspend fun all(): List<Workplace>
 
     @Insert
-    fun insert(workplace: Workplace)
+    suspend fun insert(workplace: Workplace)
 
     @Query("SELECT * FROM workplace WHERE id =:id")
     suspend fun getByID(id: Long): Workplace
 
     @Update()
-    fun update(workplace: Workplace)
+    suspend fun update(workplace: Workplace)
 
     @Delete
-    fun delete(workplace: Workplace)
+    suspend fun delete(workplace: Workplace)
 }

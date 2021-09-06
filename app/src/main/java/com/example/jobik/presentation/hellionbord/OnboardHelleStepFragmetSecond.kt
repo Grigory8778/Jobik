@@ -9,9 +9,10 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.jobik.R
 import com.example.jobik.presentation.base.App
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class OnboardHelleStepFragmetSecond: Fragment() {
-    private val presenter by lazy { HelloOnbordPresenter(App.INSTANCE.router) }
+    private val viewModel by viewModel<HelloOnbordViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -24,10 +25,10 @@ class OnboardHelleStepFragmetSecond: Fragment() {
         val btnNext = view.findViewById<Button>(R.id.btn_second_next)
         val txtSkip= view.findViewById<TextView>(R.id.txt_second_skip)
         btnNext.setOnClickListener {
-            presenter.getHelloSecondToHelloThird()
+            viewModel.getHelloSecondToHelloThird()
         }
         txtSkip.setOnClickListener {
-            presenter.getHelloToAddScreens()
+            viewModel.getHelloToAddScreens()
         }
     }
 }
