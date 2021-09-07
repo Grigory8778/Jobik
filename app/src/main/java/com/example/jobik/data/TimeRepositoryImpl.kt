@@ -20,14 +20,12 @@ class TimeRepositoryImpl(private val sharedPreferences: SharedPreferences) : Tim
     }
 
     override fun getMin(): Int {
-        return  sharedPreferences.getInt(TIME_MIN, 30)
+        return sharedPreferences.getInt(TIME_MIN, 30)
     }
 
     override fun getHour(): Int {
-        return  sharedPreferences.getInt(TIME_HOUR, 30)
+        return sharedPreferences.getInt(TIME_HOUR, 30)
     }
-
-
 
     companion object {
         private const val KAY_STATUS: String = "KAY_STATUS"

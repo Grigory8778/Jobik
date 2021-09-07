@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.ResourceCursorAdapter
 import android.widget.TextView
+import android.widget.ToggleButton
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.jobik.R
 import com.example.jobik.presentation.base.Item
+import kotlin.concurrent.fixedRateTimer
 
 class RecAdapter() :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -42,13 +44,24 @@ class RecAdapter() :
         notifyDataSetChanged()
     }
 
+    fun getTrueElements(list: List<Item>) {
+//       var state = list.filterIsInstance<Item.Elements>().filter { it.state }
+//        if (Item.Elements)
+//
+    }
+
+
     inner class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bind(model: Item.Elements, position: Int) {
+            val tgbOne = itemView.findViewById<ToggleButton>(R.id.tgb_one)
             val txt = itemView.findViewById<TextView>(R.id.txtVie_one)
             val recImg = itemView.findViewById<ImageView>(R.id.image_one)
             txt.setText(model.name)
             recImg.backgroundTintList = ColorStateList.valueOf(model.color)
             Glide.with(itemView).load(model.image).into(recImg)
+            tgbOne.setOnClickListener {
+                model.state = !model.state
+            }
         }
     }
 

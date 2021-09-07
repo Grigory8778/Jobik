@@ -31,8 +31,8 @@
 
     <ToggleButton
         android:id="@+id/tgb_one"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/wid24"
+        android:layout_height="@dimen/heig24"
         android:gravity="center"
         android:background="@drawable/btn_toggle"
         android:focusable="false"
@@ -46,7 +46,7 @@
        />
 <View
     android:layout_width="match_parent"
-    android:layout_height="1dp"
+    android:layout_height="@dimen/h1"
     app:layout_constraintTop_toBottomOf="@+id/image_one"
     app:layout_constraintEnd_toEndOf="parent"
     android:layout_margin="@dimen/s16p"

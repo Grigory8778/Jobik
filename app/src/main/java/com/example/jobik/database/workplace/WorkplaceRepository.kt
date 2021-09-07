@@ -1,6 +1,6 @@
-package com.example.jobik.database
+package com.example.jobik.database.workplace
 
-interface DatabaseRepository {
+interface WorkplaceRepository {
     suspend fun getAll(): List<Workplace>
     suspend fun insert(workplace: Workplace)
     suspend fun getById(id: Long): Workplace

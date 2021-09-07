@@ -7,28 +7,28 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.jobik.presentation.base.App
 import com.example.jobik.R
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class OnboardHelloStepFragmetThird: Fragment() {
+class OnboardHelleStepSecondFragmet : Fragment() {
     private val viewModel by viewModel<HelloOnbordViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.onbord_hello_step_third, container, false)
+        return inflater.inflate(R.layout.onbord_hello_step_second, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btnNext = view.findViewById<Button>(R.id.btn_third_next)
-        val txtSkip= view.findViewById<TextView>(R.id.txt_third_skip)
+        val btnNext = view.findViewById<Button>(R.id.btn_second_next)
+        val txtSkip = view.findViewById<TextView>(R.id.txt_second_skip)
         btnNext.setOnClickListener {
-            viewModel.getHelloToAddScreens()
+            viewModel.openHelloSecondToHelloThird()
         }
         txtSkip.setOnClickListener {
-            viewModel.getHelloToAddScreens()
+            viewModel.openHelloToAddScreens()
         }
     }
 }

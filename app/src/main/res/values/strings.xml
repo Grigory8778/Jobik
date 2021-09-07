@@ -26,5 +26,18 @@
     <string name="window">"Окна"</string>
     <string name="door">"Дверь"</string>
     <string name="signaling">"Сигнализация"</string>
-
+    \\NameCategory
+    <string name="house">"Дом"</string>
+    <string name="work">"Работа"</string>
+    <string name="title">Название</string>
+    <string name="add_list">Добавить из списка</string>
+    <string name="сategory">Категория</string>
+    <string name="add_category">Добавить категорию</string>
+    <string name="blank_screen_txt">Нажмите “+”, чтобы добавить действие</string>
+    <string name="blank_screen_title">Тут пока пусто...</string>
+    <string name="next">ДАЛЬШЕ</string>
+    <string name="txt_control">Все под контролем</string>
+    <string name="skip">Пропустить</string>
+    <string name="choose">Выбирай и отмечай</string>
+    <string name="forget">Чтобы не забыть</string>
 </resources>

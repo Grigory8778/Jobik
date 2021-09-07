@@ -1,6 +1,6 @@
-package com.example.jobik.database
+package com.example.jobik.database.workplace
 
-class DatabaseRepositoryImpl(private val appDatabase: AppDatabase) : DatabaseRepository {
+class WorkplaceRepositoryImpl(private val appDatabase: AppDatabase) : WorkplaceRepository {
     override suspend fun getAll(): List<Workplace> = appDatabase.weatherDao().all()
 
     override suspend fun insert(workplace: Workplace) = appDatabase.weatherDao().insert(workplace)

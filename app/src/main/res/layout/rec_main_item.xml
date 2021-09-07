@@ -31,8 +31,8 @@
 
     <ToggleButton
         android:id="@+id/tgb_main"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/wid24"
+        android:layout_height="@dimen/heig24"
         android:layout_marginEnd="@dimen/t16p"
         android:background="@drawable/toggle_home"
         android:focusable="false"

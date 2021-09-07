@@ -12,7 +12,7 @@ class OnbordActivityViewModel(private val router: Router, private val repository
     }
 
     fun openOnbord() {
-        router.navigateTo(Screens.getOnbornScreens())
+        router.navigateTo(Screens.getOnboardScreens())
     }
 
     fun openMain() {

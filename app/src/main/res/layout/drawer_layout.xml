@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/drawer"
-        android:layout_width="300dp"
+        android:layout_width="@dimen/width_300"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white"
@@ -18,11 +18,10 @@
             android:id="@+id/draw_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="Категория"
+            android:layout_margin="@dimen/t16p"
+            android:text="@string/сategory"
             android:textColor="@color/black"
-            android:textSize="24sp"
-
+            android:textSize="@dimen/sp24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,12 +29,12 @@
             android:id="@+id/draw_txt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="@dimen/start56"
             android:layout_marginTop="@dimen/t16p"
             android:clickable="true"
-            android:text="Дом"
+            android:text="@string/house"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/s16p"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/draw_txt" />
 
@@ -43,7 +42,7 @@
             android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
+            android:layout_marginStart="@dimen/start18"
             app:layout_constraintBottom_toBottomOf="@+id/draw_txt1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/draw_txt1"
@@ -53,12 +52,12 @@
             android:id="@+id/draw_txt2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="@dimen/start56"
             android:layout_marginTop="@dimen/t16p"
             android:clickable="true"
-            android:text="Работа"
+            android:text="@string/work"
             android:textColor="@color/black"
-            android:textSize="@dimen/t16p"
+            android:textSize="@dimen/s16p"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/draw_txt1" />
 
@@ -66,7 +65,7 @@
             android:id="@+id/imageView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
+            android:layout_marginStart="@dimen/start18"
             app:layout_constraintBottom_toBottomOf="@+id/draw_txt2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/draw_txt2"
@@ -76,12 +75,12 @@
             android:id="@+id/draw_txt3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="@dimen/start56"
             android:layout_marginTop="@dimen/t16p"
             android:clickable="true"
-            android:text="Добавить категорию"
+            android:text="@string/add_category"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/s16p"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/draw_txt2" />
 
@@ -89,7 +88,7 @@
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="22dp"
+            android:layout_marginStart="@dimen/start22"
             app:layout_constraintBottom_toBottomOf="@+id/draw_txt3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/draw_txt3"
@@ -102,7 +101,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolmain_drawer"
             android:layout_width="match_parent"
@@ -112,13 +110,14 @@
             app:layout_constraintTop_toTopOf="parent"
             app:menu="@menu/menu_main"
             app:navigationIcon="@drawable/ic_baseline_format_align_justify_24"
-            app:title="Дом" />
+            app:title="@string/house" />
+
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            app:layout_constraintTop_toBottomOf="@+id/toolmain_drawer"
+            android:layout_height="@dimen/h1"
+            android:background="@color/strip"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/strip"/>
+            app:layout_constraintTop_toBottomOf="@+id/toolmain_drawer" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_main"
@@ -139,6 +138,4 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.drawerlayout.widget.DrawerLayout>

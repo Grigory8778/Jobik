@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.annotation.DrawableRes
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,10 +24,8 @@ class AddListOnbordFragment : Fragment() {
         return inflater.inflate(R.layout.add_list_onbord, container, false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         val rec = view.findViewById<RecyclerView>(R.id.recycler)
         val layoutManager = LinearLayoutManager(context)
         rec.layoutManager = layoutManager
@@ -37,7 +36,8 @@ class AddListOnbordFragment : Fragment() {
         val btn = view.findViewById<Button>(R.id.btn_add)
         btn.setOnClickListener {
             viewModel.getAdd()
-            viewModel.insert(1, "Дом")
+            viewModel.insert(1, R.string.house)
+            viewModel.insert(2, R.string.work)
         }
     }
 }

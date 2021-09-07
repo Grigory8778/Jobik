@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/menu_main"
         app:navigationIcon="@drawable/ic_baseline_format_align_justify_24"
-        app:title="Дом" />
+        app:title="@string/house" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

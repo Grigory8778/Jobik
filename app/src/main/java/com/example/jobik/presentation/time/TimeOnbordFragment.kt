@@ -13,8 +13,7 @@ import com.example.jobik.data.TimeRepositoryImpl
 import com.example.jobik.presentation.onbord.OnbordActivityViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class TimeOnbordFragment : Fragment(){
-
+class TimeOnbordFragment : Fragment() {
     private val viewModel by viewModel<TimeOnbordViewModel>()
     private val timePicker = view?.findViewById<TimePicker>(R.id.time_picker)
     override fun onCreateView(
@@ -36,13 +35,5 @@ class TimeOnbordFragment : Fragment(){
             viewModel.saveStatus(false)
             viewModel.openMain()
         }
-    }
-
-   fun setMin(mint: Int) {
-        timePicker?.minute = mint
-    }
-
-    fun setHour(hour: Int) {
-        timePicker?.hour = hour
     }
 }

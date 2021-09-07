@@ -5,11 +5,11 @@ import com.example.jobik.presentation.navigation.Screens
 import com.github.terrakok.cicerone.Router
 
 class HomeViewModel(private val router: Router) : ViewModel() {
-    fun getHomeToSheet() {
+    fun openHomeToSheet() {
         router.navigateTo(Screens.getSheet())
     }
 
-    fun getMainSheet() {
+    fun openMainSheet() {
         router.navigateTo(Screens.getMainSheet())
     }
 }

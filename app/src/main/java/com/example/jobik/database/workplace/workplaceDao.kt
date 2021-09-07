@@ -1,4 +1,4 @@
-package com.example.jobik.database
+package com.example.jobik.database.workplace
 
 import androidx.room.*
 

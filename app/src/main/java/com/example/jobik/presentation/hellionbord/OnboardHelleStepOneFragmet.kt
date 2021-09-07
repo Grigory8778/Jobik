@@ -8,30 +8,28 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.jobik.R
-import com.example.jobik.presentation.addonbord.AddListOnbordViewModel
-import com.example.jobik.presentation.base.App
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-class OnboardHelleStepFragmetOne:Fragment() {
+class OnboardHelleStepOneFragmet : Fragment() {
     private val viewModel by viewModel<HelloOnbordViewModel>()
-        override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-        ): View? {
-            return inflater.inflate(R.layout.onbord_hello_step_one, container, false)
-        }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.onbord_hello_step_one, container, false)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btnNext = view.findViewById<Button>(R.id.btn_one_next)
-        val txtSkip= view.findViewById<TextView>(R.id.txt_one_skip)
+        val txtSkip = view.findViewById<TextView>(R.id.txt_one_skip)
         btnNext.setOnClickListener {
-            viewModel.getHelloOneToHelloSecond()
+            viewModel.openHelloOneToHelloSecond()
         }
         txtSkip.setOnClickListener {
-            viewModel.getHelloToAddScreens()
+            viewModel.openHelloToAddScreens()
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.jobik.database
+package com.example.jobik.database.workplace
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -7,5 +7,5 @@ import androidx.room.PrimaryKey
 data class Workplace(
     @PrimaryKey(autoGenerate = true)
     var id: Long,
-    var name: String? = null
+    var name: Int
 )

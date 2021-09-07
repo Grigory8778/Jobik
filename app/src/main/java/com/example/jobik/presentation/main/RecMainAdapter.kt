@@ -14,14 +14,13 @@ import com.bumptech.glide.Glide
 import com.example.jobik.R
 import com.example.jobik.presentation.base.Item
 
-class RecMainAdapter:
+class RecMainAdapter :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private val list: MutableList<Item> = mutableListOf()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return MainViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.rec_main_item, parent, false)
         )
-
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -43,13 +42,13 @@ class RecMainAdapter:
             val txt = itemView.findViewById<TextView>(R.id.txtVie_main)
             val recImg = itemView.findViewById<ImageView>(R.id.image_main)
             txt.setText(model.name)
-            recImg.backgroundTintList=ColorStateList.valueOf(model.color)
+            recImg.backgroundTintList = ColorStateList.valueOf(model.color)
             Glide.with(itemView).load(model.image).into(recImg)
             toggleButton.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
-                    container.backgroundTintList= ColorStateList.valueOf(model.color)
+                    container.backgroundTintList = ColorStateList.valueOf(model.color)
                 } else {
-                    container.backgroundTintList= ColorStateList.valueOf(Color.WHITE)
+                    container.backgroundTintList = ColorStateList.valueOf(Color.WHITE)
                 }
             }
         }

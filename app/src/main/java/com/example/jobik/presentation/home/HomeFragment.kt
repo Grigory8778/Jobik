@@ -9,11 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jobik.R
-import com.example.jobik.presentation.base.App
 import com.example.jobik.presentation.base.Item
-import com.example.jobik.presentation.hellionbord.HelloOnbordViewModel
 import com.example.jobik.presentation.main.RecMainAdapter
-import com.example.jobik.presentation.onbord.RecAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -25,7 +22,6 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         return inflater.inflate(R.layout.home_main, container, false)
     }
 
@@ -36,7 +32,7 @@ class HomeFragment : Fragment() {
         val layoutManager = LinearLayoutManager(context)
         val adapter = RecMainAdapter()
         addBat.setOnClickListener {
-            viewModel.getMainSheet()
+            viewModel.openMainSheet()
         }
         resyc.layoutManager = layoutManager
         resyc.adapter = adapter

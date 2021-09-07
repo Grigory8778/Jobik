@@ -2,10 +2,7 @@ package com.example.jobik.presentation.onbord
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.jobik.presentation.base.App
 import com.example.jobik.R
-import com.example.jobik.data.TimeRepositoryImpl
-import com.example.jobik.presentation.main.MainViewModel
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.androidx.AppNavigator
 import org.koin.android.ext.android.inject
@@ -24,13 +21,11 @@ class OnbordActivity : AppCompatActivity() {
 
     override fun onResumeFragments() {
         super.onResumeFragments()
-      navigatorHolder.setNavigator(navigator)
+        navigatorHolder.setNavigator(navigator)
     }
 
     override fun onPause() {
         navigatorHolder.removeNavigator()
         super.onPause()
     }
-
-
 }

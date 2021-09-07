@@ -3,60 +3,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:layout_constraintCircleRadius="@dimen/s16p"
-    android:background="@drawable/bottom_shell_fig">
+    android:background="@drawable/bottom_shell_fig"
+    app:layout_constraintCircleRadius="@dimen/s16p">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Добавить из списка"
+        android:layout_marginStart="@dimen/start_72"
+        android:layout_marginTop="@dimen/top32"
+        android:text="@string/add_list"
         android:textAlignment="center"
-        android:textSize="16sp"
         android:textColor="@color/black"
-        android:layout_marginStart="72dp"
+        android:textSize="@dimen/s16p"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/wid24"
+        android:layout_height="@dimen/heig24"
+        android:layout_marginStart="@dimen/start20"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
-        android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView"
         app:srcCompat="@drawable/ic_bullet" />
 
     <TextView
-        android:layout_marginTop="37dp"
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/start_72"
+        android:layout_marginTop="@dimen/top38"
         android:text="Добавить свое действие"
-        android:layout_marginStart="72dp"
         android:textAlignment="center"
-        android:textSize="16sp"
         android:textColor="@color/black"
+        android:textSize="@dimen/s16p"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_margin="20dp"
-
+        android:layout_width="@dimen/wid24"
+        android:layout_height="@dimen/heig24"
+        android:layout_margin="@dimen/start20"
         app:layout_constraintBottom_toBottomOf="@+id/textView1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView1"
         app:srcCompat="@drawable/btn_toggle" />
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toBottomOf="@id/textView1"
-    app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

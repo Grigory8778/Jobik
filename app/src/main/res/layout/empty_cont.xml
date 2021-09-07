@@ -19,21 +19,22 @@
         android:id="@+id/empty_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Тут пока пусто..."
+        android:layout_marginTop="@dimen/t16p"
+        android:text="@string/blank_screen_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_marginTop="@dimen/t16p"
         app:layout_constraintTop_toBottomOf="@+id/imageEmpty" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Нажмите “+”, чтобы добавить действие"
+        android:layout_marginTop="@dimen/t16p"
+        android:text="@string/blank_screen_txt"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:layout_marginTop="@dimen/t16p"
         app:layout_constraintTop_toBottomOf="@+id/empty_txt" />
 </androidx.constraintlayout.widget.ConstraintLayout>
