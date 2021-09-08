@@ -1,8 +1,43 @@
 <resources>
     <string name="app_name">Jobik</string>
-    <string name="text_hello_onbord">Проверяйте перед уходом бытовые электрические приборы, сантехнику</string>
+    <string name="text_hello_onbord">Проверяйте перед уходом \nбытовые электрические \nприборы, сантехнику</string>
     <string name="time_onbord_complite">ГОТОВО</string>
     <string name="time_onbord_txt">не напоминать</string>
     <string name="txt2_time_onbord">Мы будем присылать вам уведомление, чтобы вы не забыли проверить все приборы перед уходом</string>
     <string name="txt3_time_onbord">В какое время напоминать?</string>
+    <string name="menu_1">Сбросить</string>
+    <string name="menu_2">Удалить</string>
+    <string name="menu_3">Напомнить</string>
+    <string name="txt_step1">Теперь вам не придется мучительно  \nвспоминать, выключили ли вы утюг. Отмечайте\n в приложении все действия и будьте спокойны</string>
+    <string name="txt_step_2">Добавляйте задачи на проверку и отмечайте их\n перед выходом из дома\n</string>
+    <string name="txt_step_3">Каждый день мы будем присылать вам уведомление, чтобы вы не забыли проверить все приборы перед уходом</string>
+    //Title
+    <string name="electrical">"Электроприборы"</string>
+    <string name="utilities">"Коммунальные услуги"</string>
+    <string name="exit">"На выходе"</string>
+    //Elements
+    <string name="iron">"Утюг"</string>
+    <string name="computer">"Компьютер"</string>
+    <string name="split">"Сплит-система"</string>
+    <string name="rectifier">"Утюжок"</string>
+    <string name="light">"Свет"</string>
+    <string name="water">"Вода"</string>
+    <string name="gas">"Газ"</string>
+    <string name="window">"Окна"</string>
+    <string name="door">"Дверь"</string>
+    <string name="signaling">"Сигнализация"</string>
+    \\NameCategory
+    <string name="house">"Дом"</string>
+    <string name="work">"Работа"</string>
+    <string name="title">Название</string>
+    <string name="add_list">Добавить из списка</string>
+    <string name="сategory">Категория</string>
+    <string name="add_category">Добавить категорию</string>
+    <string name="blank_screen_txt">Нажмите “+”, чтобы добавить действие</string>
+    <string name="blank_screen_title">Тут пока пусто...</string>
+    <string name="next">ДАЛЬШЕ</string>
+    <string name="txt_control">Все под контролем</string>
+    <string name="skip">Пропустить</string>
+    <string name="choose">Выбирай и отмечай</string>
+    <string name="forget">Чтобы не забыть</string>
 </resources>

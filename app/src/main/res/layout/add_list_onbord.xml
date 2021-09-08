@@ -3,16 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Что будем проверять?" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginBottom="@dimen/s16p"/>
 
     <Button
         android:id="@+id/btn_add"
-        android:layout_width="@dimen/next_buttom_width"
-        android:layout_height="@dimen/next_buttom_height"
-        android:backgroundTint="@color/next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/btn_margBottom"
+        android:backgroundTint="@color/next"
         android:text="@string/time_onbord_complite"
+        android:textSize="@dimen/t16p"
         android:textColor="@color/black"
+        android:layout_marginStart="@dimen/t16p"
+        android:layout_marginEnd="@dimen/t16p"
+        android:paddingTop="@dimen/t16p"
+        android:paddingBottom="@dimen/t16p"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:stateListAnimator="@null"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
