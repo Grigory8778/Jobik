@@ -1,7 +1,7 @@
 package com.example.jobik.database.workplace
 
 import androidx.room.*
-//import com.example.jobik.database.maindb.MainWithWorkplace
+import com.example.jobik.database.maindb.MainWithWorkplace
 
 @Dao
 interface WorkplaceDao {
@@ -19,9 +19,9 @@ interface WorkplaceDao {
 
     @Delete
     suspend fun delete(workplace: Workplace)
-//    @Transaction
-//    @Query("SELECT * FROM Workplace")
-//    suspend fun workplaceWithMain(): List<MainWithWorkplace>
-//
+
+    @Transaction
+    @Query("SELECT * FROM Workplace")
+    suspend fun workplaceWithMain(): List<MainWithWorkplace>
 
 }

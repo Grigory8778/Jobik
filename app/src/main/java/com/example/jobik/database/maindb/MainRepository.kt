@@ -1,6 +1,6 @@
 package com.example.jobik.database.maindb
 
-interface MainPepository {
+interface MainRepository {
     suspend fun getAll(): List<MainAdd>
     suspend fun insert(mainAdd: MainAdd)
     suspend fun insertList(mainAdd: List<MainAdd>)

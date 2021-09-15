@@ -44,8 +44,8 @@ class RecAdapter() :
         notifyDataSetChanged()
     }
 
-    fun getTrueElements(list: List<Item>) =
-        list.filterIsInstance<Item.Elements>().filter { it.state }
+    fun getElements(isChecked:Boolean) =
+        list.filterIsInstance<Item.Elements>().filter { it.state == isChecked }
 
 
     inner class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -56,8 +56,8 @@ class RecAdapter() :
             txt.setText(model.name)
             recImg.backgroundTintList = ColorStateList.valueOf(model.color)
             Glide.with(itemView).load(model.image).into(recImg)
-            tgbOne.setOnClickListener {
-                model.state = !model.state
+            tgbOne.setOnCheckedChangeListener { _, isChecked ->
+                model.state = isChecked
             }
         }
     }
