@@ -44,11 +44,8 @@ class RecAdapter() :
         notifyDataSetChanged()
     }
 
-    fun getTrueElements(list: List<Item>) {
-//       var state = list.filterIsInstance<Item.Elements>().filter { it.state }
-//        if (Item.Elements)
-//
-    }
+    fun getTrueElements(list: List<Item>) =
+        list.filterIsInstance<Item.Elements>().filter { it.state }
 
 
     inner class MainViewHolder(view: View) : RecyclerView.ViewHolder(view) {

@@ -27,10 +27,9 @@ class HelloOnbordViewModel(
         router.navigateTo(Screens.getHelloThirdScreen())
     }
 
-    fun insert(id: Long, color: String, image: String, name: String, state: Boolean) {
+    fun insert(id: Long, color: Int, image: Int, name: Int, state: Boolean,mainId:Long) {
         viewModelScope.launch {
-            databaseRepository.insert(MainAdd(id, color, image, name, state))
+            databaseRepository.insert(MainAdd(id, color, image, name, state,mainId))
         }
     }
-
 }

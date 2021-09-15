@@ -7,5 +7,5 @@ import androidx.room.PrimaryKey
 data class Workplace(
     @PrimaryKey(autoGenerate = true)
     var id: Long,
-    var name: Int
+    var name: String,
 )

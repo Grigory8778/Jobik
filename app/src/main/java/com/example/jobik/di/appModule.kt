@@ -32,7 +32,7 @@ val appModule = module {
     single<TimeRepository> { TimeRepositoryImpl(get()) }
     single { cicerone.router }
     single { cicerone.getNavigatorHolder() }
-    viewModel { AddListOnbordViewModel(get(), get(), get()) }
+    viewModel { AddListOnbordViewModel(get(), get(), get(),get()) }
     viewModel { HelloOnbordViewModel(get(),get(),get()) }
     viewModel { MainViewModel(get()) }
     viewModel { OnbordActivityViewModel(get(),get()) }
