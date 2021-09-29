@@ -41,6 +41,7 @@ class AddListOnbordFragment : Fragment() {
 
         btn.setOnClickListener {
             viewModel.click( getString(R.string.house), adapter.getElements(true))
+            viewModel.addListHome("Дом")
         }
     }
 }

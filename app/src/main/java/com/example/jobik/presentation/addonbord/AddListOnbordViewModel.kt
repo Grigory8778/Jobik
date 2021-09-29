@@ -20,21 +20,21 @@ class AddListOnbordViewModel(
     private val mainDatabase: MainRepository,
 ) : ViewModel() {
     val dataList: MutableLiveData<List<Item>> = MutableLiveData()
-    private val insertId = MutableLiveData<Long>()
 
     init {
         dataList.value = repository.getElementsAll()
     }
 
     fun click(
-        workplace:String,
+        workplace: String,
         list: List<Item.Elements>
     ) {
         viewModelScope.launch {
-            val idCategory = databaseRepository.insert(Workplace(0, workplace))
-            val newList = list.map { MainAdd(0, it.color, it.color, it.image, it.state, idCategory) }
-            mainDatabase.insertList(newList)
+            databaseRepository.click(workplace, list)
             router.navigateTo(Screens.getTimeScreens())
         }
+    }
+    fun addListHome(name: String) {
+        viewModelScope.launch { databaseRepository.getList(name) }
     }
 }

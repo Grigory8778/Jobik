@@ -31,9 +31,9 @@ val appModule = module {
     single { cicerone.router }
     single { cicerone.getNavigatorHolder() }
     viewModel { AddListOnbordViewModel(get(), get(), get(),get()) }
-    viewModel { HelloOnbordViewModel(get(),get(),get()) }
+    viewModel { HelloOnbordViewModel(get(),get()) }
     viewModel { MainViewModel(get()) }
     viewModel { OnbordActivityViewModel(get(),get()) }
     viewModel { TimeOnbordViewModel(get(),get()) }
-    viewModel { HomeViewModel(get()) }
+    viewModel { HomeViewModel(get(),get()) }
 }
