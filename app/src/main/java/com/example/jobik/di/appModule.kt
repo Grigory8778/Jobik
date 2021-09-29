@@ -3,9 +3,8 @@ package com.example.jobik.di
 import android.content.Context
 import androidx.room.Room
 import com.example.jobik.data.*
-import com.example.jobik.database.maindb.AppMainDatabase
-import com.example.jobik.database.maindb.MainPepository
-import com.example.jobik.database.maindb.MainPepositoryImpl
+import com.example.jobik.database.maindb.MainRepository
+import com.example.jobik.database.maindb.MainRepositoryImpl
 import com.example.jobik.database.workplace.AppDatabase
 import com.example.jobik.database.workplace.WorkplaceRepository
 import com.example.jobik.database.workplace.WorkplaceRepositoryImpl
@@ -23,19 +22,18 @@ val appModule = module {
     val cicerone = Cicerone.create()
 
     single { Room.databaseBuilder(get(), AppDatabase::class.java, "database").build() }
-    single { Room.databaseBuilder(get(), AppMainDatabase::class.java, "mainDataBase").build() }
     single { ResourceProvider(get()) }
     single { get<Context>().getSharedPreferences("APP_PREFERENCES", Context.MODE_PRIVATE) }
     single<WorkplaceRepository> { WorkplaceRepositoryImpl(get()) }
-    single<MainPepository> { MainPepositoryImpl(get()) }
+    single<MainRepository> { MainRepositoryImpl(get()) }
     single<ElementsRepository> { ElementsRepositoryImpl(get()) }
     single<TimeRepository> { TimeRepositoryImpl(get()) }
     single { cicerone.router }
     single { cicerone.getNavigatorHolder() }
     viewModel { AddListOnbordViewModel(get(), get(), get(),get()) }
-    viewModel { HelloOnbordViewModel(get(),get(),get()) }
+    viewModel { HelloOnbordViewModel(get(),get()) }
     viewModel { MainViewModel(get()) }
     viewModel { OnbordActivityViewModel(get(),get()) }
     viewModel { TimeOnbordViewModel(get(),get()) }
-    viewModel { HomeViewModel(get()) }
+    viewModel { HomeViewModel(get(),get()) }
 }

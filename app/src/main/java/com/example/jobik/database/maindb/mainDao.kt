@@ -22,6 +22,4 @@ interface MainDao {
 
     @Delete
     suspend fun delete(mainAdd: MainAdd)
-//    @Query("SELECT id FROM table_name WHERE rowid = :rowId")
-//    suspend fun
 }

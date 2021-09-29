@@ -31,22 +31,17 @@ class AddListOnbordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val rec = view.findViewById<RecyclerView>(R.id.recycler)
         val layoutManager = LinearLayoutManager(context)
+        val btn = view.findViewById<Button>(R.id.btn_add)
         rec.layoutManager = layoutManager
         rec.adapter = adapter
 
         viewModel.dataList.observe(viewLifecycleOwner) { list ->
             adapter.setList(list)
         }
-        viewModel.dataList.observe(viewLifecycleOwner) { list ->
-            adapter.getTrueElements(list)
-        }
 
-
-        val btn = view.findViewById<Button>(R.id.btn_add)
         btn.setOnClickListener {
-            viewModel.getAdd()
-            viewModel.insert(1, R.string.house.toString())
-            viewModel.insert(2, R.string.work.toString())
+            viewModel.click( getString(R.string.house), adapter.getElements(true))
+            viewModel.addListHome("Дом")
         }
     }
 }
