@@ -44,13 +44,19 @@ class RecMainAdapter :
             txt.setText(model.name)
             recImg.backgroundTintList = ColorStateList.valueOf(model.color)
             Glide.with(itemView).load(model.image).into(recImg)
+            container.setOnClickListener {
+                model.state = !model.state
+                toggleButton.isChecked = model.state
+            }
             toggleButton.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     container.backgroundTintList = ColorStateList.valueOf(model.color)
                 } else {
                     container.backgroundTintList = ColorStateList.valueOf(Color.WHITE)
                 }
+                model.state = isChecked
             }
+            toggleButton.isChecked = model.state
         }
     }
 

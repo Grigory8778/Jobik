@@ -42,8 +42,7 @@ class HomeFragment : Fragment() {
                 Item.Elements(
                     name = it.name,
                     image = it.image,
-                    color = it.color,
-                    state = it.state
+                    color = it.color
                 )
             })
             toolbar.title = model.workplace.name
