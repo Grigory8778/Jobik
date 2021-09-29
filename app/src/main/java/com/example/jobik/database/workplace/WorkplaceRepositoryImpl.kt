@@ -16,7 +16,7 @@ class WorkplaceRepositoryImpl(private val appDatabase: AppDatabase) : WorkplaceR
     override suspend fun click(workplace: String, list: List<Item.Elements>) {
         val idCategory = insert(Workplace(0, workplace))
         val newList =
-            list.map { MainAdd(0, it.color, it.color, it.image.toString(), it.state, idCategory) }
+            list.map { MainAdd(id =0, image = it.image, color = it.color, name = it.name, state = it.state, mainId = idCategory) }
         insertLis(newList)
     }
     override suspend fun getList(name: String): MainWithWorkplace {
