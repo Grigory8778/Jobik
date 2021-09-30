@@ -66,7 +66,6 @@ class RecAdapter() :
         fun bind(model: Item.Title) {
             itemView.findViewById<TextView>(R.id.txt_title_item).setText(model.title)
         }
-
     }
 
     override fun getItemViewType(position: Int): Int {

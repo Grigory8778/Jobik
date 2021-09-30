@@ -20,10 +20,6 @@ class HomeViewModel(
         router.navigateTo(Screens.getSheet())
     }
 
-    fun openMainSheet() {
-        router.navigateTo(Screens.getMainSheet())
-    }
-
     fun addListHome(name: String) {
         viewModelScope.launch {
             dataList.value = databaseRepository.getList(name)
