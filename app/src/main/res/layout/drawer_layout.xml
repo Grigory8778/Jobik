@@ -11,8 +11,8 @@
         android:layout_width="@dimen/width_300"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/white"
-        android:orientation="vertical">
+        tools:layout_gravity=""
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/draw_txt"
@@ -25,81 +25,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/draw_txt1"
-            android:layout_width="wrap_content"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_drawer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/start56"
-            android:layout_marginTop="@dimen/t16p"
-            android:clickable="true"
-            android:text="@string/house"
-            android:textColor="@color/black"
-            android:textSize="@dimen/s16p"
+            app:layout_constraintTop_toBottomOf="@+id/draw_txt"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/draw_txt" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/start18"
-            app:layout_constraintBottom_toBottomOf="@+id/draw_txt1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/draw_txt1"
-            app:srcCompat="@drawable/ic_home" />
-
-        <TextView
-            android:id="@+id/draw_txt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/start56"
-            android:layout_marginTop="@dimen/t16p"
-            android:clickable="true"
-            android:text="@string/work"
-            android:textColor="@color/black"
-            android:textSize="@dimen/s16p"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/draw_txt1" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/start18"
-            app:layout_constraintBottom_toBottomOf="@+id/draw_txt2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/draw_txt2"
-            app:srcCompat="@drawable/ic_work" />
-
-        <TextView
-            android:id="@+id/draw_txt3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/start56"
-            android:layout_marginTop="@dimen/t16p"
-            android:clickable="true"
-            android:text="@string/add_category"
-            android:textColor="@color/black"
-            android:textSize="@dimen/s16p"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/draw_txt2" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/start22"
-            app:layout_constraintBottom_toBottomOf="@+id/draw_txt3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/draw_txt3"
-            app:srcCompat="@drawable/btn_toggle" />
-
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:visibility="gone">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolmain_drawer"
@@ -123,7 +63,7 @@
             android:id="@+id/recycler_main"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:padding="@dimen/s16p"
+            android:padding="@dimen/t16p"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolmain_drawer" />
 

@@ -2,7 +2,6 @@ package com.example.jobik.presentation.navigation
 
 import android.content.Intent
 import com.example.jobik.Home.sheet.BottomSheetFragment
-import com.example.jobik.SheetActivity
 import com.example.jobik.presentation.addonbord.AddListOnbordFragment
 import com.example.jobik.presentation.hellionbord.OnboardHelleStepOneFragmet
 import com.example.jobik.presentation.hellionbord.OnboardHelleStepSecondFragmet
@@ -25,5 +24,5 @@ object Screens {
     fun getOnboardScreens() = ActivityScreen { Intent(it, OnbordActivity::class.java) }
     fun getHomeScreens() = FragmentScreen { HomeFragment() }
     fun getSheet() = FragmentScreen { BottomSheetFragment() }
-    fun getMainSheet() = ActivityScreen { Intent(it, SheetActivity::class.java) }
+
 }

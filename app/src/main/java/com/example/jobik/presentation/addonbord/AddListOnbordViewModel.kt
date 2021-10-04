@@ -34,7 +34,5 @@ class AddListOnbordViewModel(
             router.navigateTo(Screens.getTimeScreens())
         }
     }
-    fun addListHome(name: String) {
-        viewModelScope.launch { databaseRepository.getList(name) }
-    }
+
 }
